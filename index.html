@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Rock Paper Scissors</title>
-    </head>
 
-    <body>
-        <script src="scripts/main.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <script src="https://kit.fontawesome.com/8ced3ac612.js" crossorigin="anonymous"></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="rps">Rock Paper Scissors</div>
+    </header>
+    <main class="main-container">
+        <div class="status"><p>Choose your weapon</p></div>
+        <div class="field">
+            <div class="player-option"></div>
+            <div class="score"></div>
+            <div class="computer-option"></div>
+        </div>
+        <div class="options">
+            <button class="rock"><i class="fas fa-hand-rock"></i></button>
+            <button class="paper"><i class="fas fa-hand-paper"></i></button>
+            <button class="scissors"><i class="fas fa-hand-scissors"></i></button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="creator">Created by <a href="https://github.com/sandeepdotcode/rock-paper-scissors"
+                target="_blank">Sandeep K K <i class="fab fa-github"></i></a>
+        </p>
+    </footer>
+</body>
+
 </html>

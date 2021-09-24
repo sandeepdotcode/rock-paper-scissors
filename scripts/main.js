@@ -69,4 +69,4 @@ function showFinalResult() {
     }
 }
 
-game();
+//game();
