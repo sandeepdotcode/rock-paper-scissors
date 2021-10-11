@@ -1,13 +1,10 @@
 let playerScore = 0;
 let computerScore = 0;
 
-let playerSelection;
-let computerSelection;
-
 // function to get player choice and computer choice
 function getInputs() {
     playerSelection = prompt("Rock, Paper, Scissors?").toLowerCase();
-    computerSelection = computerPlay();
+    
 }
 
 // function that makes the computers play
@@ -20,43 +17,43 @@ function computerPlay() {
 
 // function to play one round of the game
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-        showRoundResult("It's a tie!");
+    if (playerSelection === computerSelection) {  
         return 'tie';
     }
     else if (
         (playerSelection == 'rock' && computerSelection == 'scissors') || 
         (playerSelection == 'scissors' && computerSelection == 'paper') || 
         (playerSelection == 'paper' && computerSelection == 'rock')) {
-
+        
+        playerScore++;
         return 'win';
     }
     else {
+        computerScore++;
         return 'lose';
     }
   }
  
 // function to display the result of a round
-function showRoundResult(roundMessage) {
-    console.log(roundMessage.concat(` Current score: ${playerScore} - ${computerScore}`));
-}
-
-// function to play a five round game
-function game() {
-    while (playerScore < 3 && computerScore < 3) {
-        getInputs();
-        result = playRound(playerSelection, computerSelection);
-        if (result == 'win') {
-            playerScore++;
-            showRoundResult(`You win! ${playerSelection} beats ${computerSelection}.`);
-        }
-        else if (result == 'lose') {
-            computerScore++;
-            showRoundResult(`You Lose! ${computerSelection} beats ${playerSelection}.`);
-        }
+function showRoundResult(result, playerSelection, computerSelection) {
+    let roundMessage;
+    if (result == 'win') {
+        roundMessage = `You win! ${playerSelection} beats ${computerSelection}.`;
+    }
+    else if (result == 'lose') {
+        roundMessage = `You Lose! ${computerSelection} beats ${playerSelection}.`;
+    }
+    else if(result == 'tie') {
+        roundMessage =  "It's a tie!";
     }
 
-    showFinalResult();
+    const status = document.querySelector('.status');
+    status.textContent = roundMessage;
+
+    const playerScoreDisp = document.querySelector('.player-score');
+    const computerScoreDisp = document.querySelector('.computer-score');
+    playerScoreDisp.textContent = playerScore;
+    computerScoreDisp.textContent = computerScore;
 }
 
 // function to show the final winner of the game
@@ -69,4 +66,13 @@ function showFinalResult() {
     }
 }
 
-//game();
+buttons = document.querySelectorAll('.weapon-button');
+
+buttons.forEach(button => button.addEventListener('click', function(e) {
+    const playerSelection = button.getAttribute('id');
+    const computerSelection = computerPlay();
+    
+    result = playRound(playerSelection, computerSelection);
+    showRoundResult(result, playerSelection, computerSelection);
+    
+}))
