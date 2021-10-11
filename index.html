@@ -7,25 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
 
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
     <script src="https://kit.fontawesome.com/8ced3ac612.js" crossorigin="anonymous"></script>
     <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
     <header class="header">
-        <div class="rps">Rock Paper Scissors</div>
+        <h1 class="rps">Rock Paper Scissors</h1>
     </header>
     <main class="main-container">
-        <div class="status"><p>Choose your weapon</p></div>
+        <div class="status"></div>
         <div class="field">
             <div class="player-option"></div>
             <div class="score"></div>
             <div class="computer-option"></div>
         </div>
+        <div class="select-text">Choose your option</div>
         <div class="options">
-            <button class="rock"><i class="fas fa-hand-rock"></i></button>
-            <button class="paper"><i class="fas fa-hand-paper"></i></button>
-            <button class="scissors"><i class="fas fa-hand-scissors"></i></button>
+            <button class="rock weapon-button"><i class="fas fa-hand-rock"></i></button>
+            <button class="paper weapon-button"><i class="fas fa-hand-paper"></i></button>
+            <button class="scissors weapon-button"><span class="fa-rotate-270"><i class="fas fa-hand-scissors fa-flip-horizontal"></i></span></button>
         </div>
     </main>
     <footer class="footer">

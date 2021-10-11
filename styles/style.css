@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.main-container {
+    border: 5px solid black;
+    flex: 1 0 auto;
+    margin: 0 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.status {
+    height: 8%;
+}
+
+.field {
+    height: 60%;
+    display: flex;
+}
+
+.select-text {
+    height: 8%;
+    text-align: center;
+}
+
+.options {
+    height: 24%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.weapon-button {
+    border: none;
+    background: none;
+}
+
+.weapon-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3ms;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+}
+
+.fas {
+    font-size: 66px;
+}
+
+.fa-rotate-270 {
+    display: inline-block;
+}
+
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+}
