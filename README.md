@@ -24,8 +24,11 @@ By completing this part of the project, I
 
 - Learned DOM Manipulation and Event handlers in JS
 - Refreshed CSS knowledge
+- Learned 'fork-and-branch' git workflow
 
 ### **Live Demo**
+
+[Click here](https://sandeepdotcode.github.io/rock-paper-scissors/) for live demo.
 
 ## Things to be Implemented
 
